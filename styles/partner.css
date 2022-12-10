@@ -1,0 +1,174 @@
+.inputbox {
+    position: relative;
+    width: 90%;
+    height: 6vw;
+}
+
+.inputbox input {
+    position: absolute;
+    top: 4vw;
+    left: 6%;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.inputbox span {
+    position: absolute;
+    top: 4vw;
+    left: 6%;
+    /* padding: 20px 10px 10px; */
+    font-size: 1em;
+    color: #8f8f8f;
+    letter-spacing: 00.05em;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.inputbox input:valid ~span,
+.inputbox input:focus ~span {
+    color: #001d24;
+    transform: translateY(-2vw);
+    font-size: 0.75em;
+}
+
+.inputbox i {
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #61bae2;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.inputbox input:valid ~i,
+.inputbox input:focus ~i {
+    height: 44px;
+}
+
+body {
+    background-color: #212121;
+}
+
+.content_grid_form {
+    min-width: 320px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.item_2{
+    grid-column: span 2;
+}
+
+.item_2 input,
+.item_2 i{
+    left: 2.5%;
+}
+
+
+.item_2 span{
+    left: 2.75%;
+}
+
+.item_2 .inputbox {
+    width: 95%;
+}
+
+.inputbox .btn_submit, 
+.inputbox .btn_reset {
+    position: relative;
+    top: 25px;
+    width: 7vw;
+    height: 3vw;
+    background: #61bae2;
+    color: #23242a;
+    font-size: 18px;
+    outline: 0;
+    border: 0;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.inputbox .btn_submit:hover, 
+.inputbox .btn_reset:hover {
+    background: #001d24;
+    color: white;
+}
+
+
+.btn_reset{
+    margin: 0 0 0 4vw;
+}
+
+.inputbox .btn_captcha{
+    margin: 1.5vw 0 0 0;
+    font-size: 2.5vw;
+    width: 20vw;
+}
+
+.title_form {
+    color: #61bae2;
+    font-size: 36px;
+    text-align: center;
+}
+
+@media (max-width: 75vh) {
+    .content_grid_form {
+        grid-template-columns: 1fr;
+        gap: 2vw;
+    }
+    .item_2 {
+        width: 95%;
+        grid-column: span 1;
+    }
+
+    .item_2 .inputbox{
+        left: 2.5%;
+    }
+
+    .inputbox span{
+        top: 4%;
+        font-size: 3vw;
+    }
+
+    .inputbox input{
+        top: 2vw;
+        font-size: 2.5vw;
+    }
+
+    .inputbox input:valid ~span,
+    .inputbox input:focus ~span {
+        font-size: 2vw;
+    }
+
+    .inputbox .btn_submit, 
+    .inputbox .btn_reset {
+        top: 25px;
+        width: 30vw;
+        height: 6vw;
+
+        font-size: 4vw;
+        left: 4%;
+    }
+
+    .btn_captcha{
+        left: 4%;
+    }
+}
+
+.container {
+    color: #61bae2;
+}

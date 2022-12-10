@@ -1,0 +1,302 @@
+/* 61e2ff 10bae2 ffffff 001d24 cccccc */
+
+
+/* ======================== PRODUCT BLOCKS ======================== */
+
+*{
+  font-family: Montserrat;
+}
+
+.shopMenu{
+  margin-top: 1vw;
+  margin-left: 2.5%;
+  width: 95%;
+  display: flex;
+  flex-flow: wrap;
+
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+}
+
+.productsMenu{
+  margin-top: 1vw;
+  margin-left: 2.5%;
+  width: 95%;
+  display: flex;
+  flex-flow: wrap;
+
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+}
+
+.productBlock{
+  width: 20vw;
+  height: 25vw;
+  margin: 2vw 1vw 2vw 1vw;
+  -moz-border-radius: 1vw;
+	-webkit-border-radius: 1vw;
+	border-radius: 1vw;
+
+  background: linear-gradient( #001d24, #00b9e6);
+  text-align: center;
+  align-items: center;
+
+  transition: all .5s;
+}
+
+.productInfo{
+  width: 20vw;
+  height: 25vw;
+  overflow: hidden;
+}
+
+.productBlock:hover{
+
+  transform: translate(0.25vw, 0.25vw);
+  box-shadow: 0.2vw 0.2vw 0.5vw gray;
+
+  transition: all .5s;
+}
+
+.productInfo::before{
+  content: '';
+
+  display: none;
+  position: absolute;
+  width: 20vw;
+  height: 25vw;
+  -moz-border-radius: 1vw;
+	-webkit-border-radius: 1vw;
+	border-radius: 1vw;
+
+  background: linear-gradient(#001d2470, rgba(255, 255, 255, 0.436));
+
+  transition: all .5s;
+}
+
+.productBlock:hover .productInfo::before{
+  display: block;
+  transition: all .5s;
+}
+
+.productBlock img{
+  vertical-align: top;
+  width: 100%;
+  transition: all .5s;
+}
+
+.productBlock:hover img{
+  margin-left: -2.5%;
+  width: 105%;
+  transition: all .5s;
+}
+
+.productBlock:hover .productInfo p{
+  display: block;
+}
+
+.productInfo p {
+  margin: -21.5vw 0vw 0vw 2.5vw;
+  font-size: 1.25vw;
+  display: none;
+  color: white;
+  position: absolute;
+}
+
+.productInfo .price {
+  margin: -24vw 0 0 7.5vw;
+  font-size: 2vw;
+}
+
+.productBlock h1 {
+  font-size: 1.5vw;
+  font-weight: 500;
+  width: 20vw;
+  color: #001d24;
+
+  transition: all .5s;
+}
+
+.productBlock:hover h1{
+  transform: translate(0.25vw, 0.25vw);
+
+  transition: all .5s;
+}
+
+.btn_container{
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 21.5vw 21.5vw 21.5vw 21.5vw;
+  grid-template-rows: 3vw 3vw;
+
+  grid-auto-flow: row;
+  gap: 0.75vw;
+}
+
+.btn_container button{
+  border-radius: 1vw;
+  position: relative;
+  
+  font-size: 1.5vw;
+  width: 18vw;
+  height: 2vw;
+
+  margin: 0.5vw 0 0 1vw;
+
+  border: 0;
+  background-color: #c5e0ed;
+
+  overflow: hidden;
+  z-index: 0;
+
+  transition: all .5s;
+}
+
+#showAll{
+  grid-column: span 2;
+  margin: 0 0 0 13vw;
+}
+
+.btn_container button::before{
+  content: '';
+  position: absolute;
+
+  width: 0vw;
+	height: 2vw;
+	-webkit-transform: skew(20deg);
+	-moz-transform: skew(20deg);
+	-o-transform: skew(20deg);
+
+  background-color: #61bae2;
+
+  z-index: -1;
+  margin: -0.1vw 0 0 0;
+
+  transition: all .5s;
+}
+
+.btn_container button:hover::before{
+  height: calc(2vw * 1.15);
+  width: 10vw;
+  margin: -0.25vw 0 0 -5vw;
+
+  transition: all .5s;
+}
+
+.btn_container button:hover{
+  height: calc(2vw * 1.1);
+  width: calc(18vw * 1.1);
+
+  transition: all .5s;
+
+  margin: 0.5vw 0 0 -0vw;
+}
+
+#showAll:hover{
+  margin: 0 0 0 12.1vw;
+  transition: all .5s;
+}
+
+.btn_container button:active{
+  background-color: #85d4e8;
+  transition: all .25s;
+}
+
+#showAll:hover::before{
+  width: 11vw;
+  margin: -0.25vw 0 0 -5.5vw;
+}
+
+@media (max-width: 75vh) {
+  .btn_container{
+    width: 100%;
+  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
+  
+    gap: 1vw;
+  }
+
+  #showAll{
+    grid-column: span 1;
+    margin: 0.5vw 0 0 5vw;
+  }
+
+  .btn_container button{
+    border-radius: 4vw;
+    position: relative;
+    
+    font-size: 1.5vw;
+    width: 80vw;
+    height: 8vw;
+  
+    margin: 0.5vw 0 0 5vw;
+
+    font-size: 5vw;
+  }
+
+  .btn_container button::before{
+    height: 8vw;
+
+  }
+
+  .btn_container button:hover, #showAll:hover{
+    height: 8vw;
+    width: 80vw;
+  
+    margin: 0 0 0 5vw;
+  }
+
+  .btn_container button:hover::before, #showAll:hover::before{
+    height: 8vw;
+    width: 40vw;
+    margin: -1.25vw 0 0 -20vw;
+  
+    transition: all .5s;
+  }
+
+  .productsMenu{
+    width: 100%;
+  }
+  
+  .productBlock{
+    width: 39vw;
+    height: 50vw;
+
+    margin: 2vw 0vw 10vw -4vw;
+  }
+  
+  .productInfo{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .productInfo::before{
+    width: 100%;
+    height: 100%;
+  }
+
+  .productBlock img{
+    vertical-align: top;
+    width: 100%;
+  }
+
+  .productInfo p {
+    margin: -40vw 0vw 0vw 0vw;
+    font-size: 4vw;
+  }
+
+  .productBlock h1 {
+    font-size: 4.5vw;
+    width: 40vw;
+  }
+
+  .productInfo .price{
+    margin: -47.5vw 0 0 11vw;
+    font-size: 6vw;
+  }
+}

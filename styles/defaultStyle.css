@@ -1,0 +1,264 @@
+/* 61e2ff 10bae2 ffffff 001d24 cccccc */
+
+body, html {
+    overflow-x: hidden;
+}
+
+*{    
+    box-sizing: content-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #001d24;
+    font-family: Montserrat;
+}
+
+li{
+    list-style: none;
+}
+
+fieldset {
+    border:0 none;
+}
+
+/* ============== HEADER ============== */
+
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom : 0.25vw solid #001d24;
+    background-color: #10bae2;
+
+    width: 90%;
+    margin-left: 5%;
+    height: 5vw;
+    
+    z-index: 1;
+}
+
+.navLinks{
+    z-index: 1;
+    color: #001d24;
+}
+
+.menu{
+    z-index: 1;
+    display: flex;
+    font-size: 2vw;
+}
+
+.menu li{
+    padding-right: 5vw; 
+}
+
+.menu a{
+    text-decoration: none;
+    color: #001d24;
+}
+
+.menu li a:hover{
+    z-index: 1;
+    transition: all .3s;
+    color: #ffffff;
+}
+
+.navLogo{
+    background-color: #10bae2;
+    height: 5vw;
+    width: 5vw;
+}
+
+.navLogo img{  
+    margin-left: 1.5vw;     
+    position: relative;
+    width: 100%;
+}
+
+#checkboxToggle{
+    display: none;
+}
+
+.hamburger{
+    display: none;
+    margin-right: 4vw;
+    font-size: 1vw;
+    cursor: pointer;
+}
+
+.hamburgerLine{
+    background-color: #001d24;
+    display: block;
+    height: 0.4vw;
+    position: relative;
+    width: 5vw;
+}
+
+.hamburgerLine::before, .hamburgerLine::after{
+    background-color: #001d24;
+    content: '';
+    display: block;
+    position: absolute;
+    transition: all .3s;
+    width: 100%;
+    height: 100%;
+}
+
+.hamburgerLine::before{
+    top: 2vw
+}
+
+.hamburgerLine::after{
+    top: -2vw
+}
+
+/* ============== FOOTER ============== */
+
+footer{
+    position: relative;
+    height:4vw;
+    margin-left: 5%;
+    width: 90%;
+    margin-bottom: 0px;
+    border-top: 0.25vw solid #001d24;
+    background-color: #10bae2;
+}
+
+#footerBlock{
+    padding-top: 0.5vw;
+    display: inline-block; 
+    position: relative;
+    list-style: none;
+    text-align: center;
+    width:44.5vw;
+    height: 3.5vw;
+    float: left;
+}
+
+#footerMediaBlock{
+    display: none;
+}
+
+footer address{
+    color: #001d24;
+    font-family: Montserrat;
+    font-size: 1vw;
+}
+
+/* ============== FONT-HEADER ============== */
+
+h1{
+    
+    text-align: center;
+    color: #001d24;
+    font-family: Montserrat;
+    font-size: 3.5vw;
+    font-weight:normal;
+}
+
+/* ============== MAIN ============== */
+
+main{
+    width: 90%;
+    margin-left: 5%;
+    padding-bottom: 3%;
+    background-color: #ffffff;
+}
+
+@media (max-width: 75vh) {
+
+    /* ============== HEADER ============== */
+    .navBar{
+        height: 10vw;
+    }
+    
+    .navLogo{
+        height: 10vw;
+        width: 10vw;
+    }
+    
+    .navLogo img{
+        margin-left: 40vw;     
+        width: 100%;
+    }
+    
+    .menu{
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        background-color: #10bae2;
+        text-align: center;
+        margin-top: 4%;
+        right: 5%;
+        left: 5%;
+    }
+
+    .menu li a{
+        margin-left: 5vw;
+        font-size: 5vw;
+        color: #001d24;
+        display: block;
+        padding: 1vw;
+    }
+    
+    #checkboxToggle:checked ~ .menu {
+        display: block;
+        max-height: 100%;
+        transition: all .5s;
+    }
+    
+    .hamburger{
+        display: block;
+        padding: 1vw 0;
+    }
+    
+    #checkboxToggle:checked ~ .hamburger .hamburgerLine{
+        background-color: transparent;
+    }
+    
+    #checkboxToggle:checked ~ .hamburger .hamburgerLine::after{
+        transform: rotate(45deg);
+        top: 0;
+    }
+    
+    #checkboxToggle:checked ~ .hamburger .hamburgerLine::before{
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    
+    /* ============== FOOTER ============== */
+    
+    footer{
+        height:15vw;
+        margin-left: 5%;
+        width: 90%;
+    }
+    
+    #footerBlock{
+        display: none;
+    }
+    
+    #footerMediaBlock{
+        text-align: center;
+        display: block;
+    }
+    
+    footer address{
+        color: #001d24;
+        font-family: Montserrat;
+        font-size: 3vw;
+    }
+
+    /* ============== FONT-HEADER ============== */
+    
+    h1{
+        text-align: center;
+        color: #001d24;
+        font-family: Montserrat;
+        font-size: 8.5vw;
+        font-weight:normal;
+    }
+    }

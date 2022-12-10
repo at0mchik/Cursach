@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" href = "styles/defaultStyle.css">
+        <link rel = "stylesheet" href = "styles/partner.css">
+        <title>Improve Esports: официальный сайт</title>
+        <link rel="icon" type="image/png" href="photo/4000x4000_logo_new.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <nav class = "navBar">
+                <div class = "navLogo">
+                    <a href="main.html"> <img src = "photo/4000x4000_logo_new.png"> </a>
+                </div>
+                <ul class = "navLinks">
+                    <input type = "checkbox" id = "checkboxToggle">
+                    <label for = "checkboxToggle" class = "hamburger"><span class = "hamburgerLine"></span></label>
+
+                    <div class = "menu">
+                        <li><a href = "main.html">Главная</a></li>
+                        <li><a href = "partners.html">Партнеры</a></li>
+                        <li><a href = "roster.html">Состав</a></li>
+                        <li><a href = "news.html">Новости</a></li>
+                        <li><a href = "shop.html">Мерч</a></li>
+                        <li><a href = "media.html">Медиа</a></li>
+                    </div>
+                </ul>
+            </nav>
+        </header> 
+
+        <main>
+            <h1>Наши партнеры</h1>
+            <div class="content_grid_form">
+                <div class="item_2">
+                    <div class="title_form">
+                        <div> Пришлите нам ваше предложение по сотрудничеству</div>
+                    </div>
+                </div>
+                <div class="item_1">
+                    <div class="inputbox">
+                        <input required="required" type="text">
+                        <span>Имя</span>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="item_1">
+                    <div class="inputbox">
+                        <input required="required" type="text">
+                        <span>Фамилия</span>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="item_1">
+                    <div class="inputbox">
+                        <input required="required" type="tel">
+                        <span>Телефон</span>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="item_1">
+                    <div class="inputbox">
+                        <input required="required" type="email">
+                        <span>Почта</span>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="item_2">
+                    <div class="inputbox">
+                        <input required="required" type="text">
+                        <span>Ваше предложение</span>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="item_1">
+                    <div class="inputbox">
+                        <input required="required" type="text" name="captcha" id="captcha">
+                        <span>Каптча</span>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="inputbox">
+                    <button type="button" name="captcha_btn" class="btn_submit btn_captcha"></button>
+                </div>
+                <div class="inputbox">
+                    <input type="submit" name="submit" class="btn_submit" required>                                                                      
+                </div>
+            </div>
+            <script src = "scripts/captcha.js"></script>
+        </main>    
+
+        <footer>
+            <div id = "footerBlock">
+                <address>
+                    <i>По всем коммерческим вопросам обращаться на данную почту:</i><br>
+                    <a href="mailto: myredmikostin@gmail.com&body = дайте деняк">Коммерческая почта</a><br>
+                </address>
+            </div>
+            <div id = "footerBlock">
+                <address>
+                    <i>Контакты CEO Никиты "anf" Костина</i><br>
+                    <a href="tel: 89777777777">Телефонный номер</a>
+                    <a href="mailto: kostin.n.03@mail.ru&body = вы крут">Электронная почта</a><br>
+                </address>
+            </div>  
+            <br>
+            <div id = "footerMediaBlock">
+                <address>
+                    <i>Контакты CEO Никиты "anf" Костина</i><br>
+                    <a href="tel: 89777777777">Телефонный номер</a>
+                    <a href="mailto: kostin.n.03@mail.ru&body = вы крут">Электронная почта</a><br>
+                    <a href="mailto: myredmikostin@gmail.com&body = дайте деняк">Коммерческая почта</a><br>
+                </address>
+            </div>
+        </footer>
+    </body>
+</html>
